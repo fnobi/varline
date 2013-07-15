@@ -11,7 +11,6 @@ module.exports = function (grunt) {
     grunt.registerMultiTask(taskName, taskDescription, function () {
         var target = this.target,
             config = grunt.config(taskName)[target],
-            done = this.async(),
 
             // config parameters
             loadPath = config.loadPath || ['src/js/*.js', 'src/js/**/*.js'],
