@@ -1,18 +1,14 @@
 {
   "name": "grunt-auto-deps",
-  "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "resolve js dependencies and concat.",
   "dependencies": {
     "grunt": "~0.4.1",
-    "extractDepVars": "git://github.com/nobii/extractDepVars.git"
-  },
-  "devDependencies": {},
-  "scripts": {
+    "extract_dep_vars": "0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nobii/grunt-auto-deps.git"
+    "url": "git://github.com/fnobi/grunt-auto-deps.git"
   },
   "keywords": [
     "gruntplugin"
