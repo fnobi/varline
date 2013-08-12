@@ -4,7 +4,7 @@
   "description": "resolve js dependencies and concat.",
   "dependencies": {
     "grunt": "~0.4.1",
-    "extract_dep_vars": "0.0.3"
+    "extract_dep_vars": "0.0.4"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   ],
   "author": "Fujisawa Shin",
   "license": "BSD",
-  "gitHead": "b239e08dd984459a5870244e3eeae100685affe6"
+  "gitHead": "b239e08dd984459a5870244e3eeae100685affe6",
+  "devDependencies": {
+    "grunt-release": "~0.5.1"
+  }
 }
