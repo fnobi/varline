@@ -20,6 +20,7 @@ module.exports = function (grunt) {
             scripts = config.scripts || [],
             locate = config.locate || {},
             ignoredNames = config.ignore || [],
+            forceddNames = config.forced || [],
             dest = config.dest || 'js';
 
         var pathsForName = scriptMatchList({
@@ -48,6 +49,10 @@ module.exports = function (grunt) {
 
                 var vars = pathToConcated(name, pathsForName, ignoredNames),
                     sources = [];
+
+                forceddNames.forEach(function (n) {
+                    vars.unshift(n);
+                });
 
                 console.log('[write] %s (%s)', destPath, vars.join(', '));
 
