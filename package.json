@@ -4,7 +4,9 @@
   "description": "resolve js dependencies and concat.",
   "dependencies": {
     "grunt": "~0.4.1",
-    "extract_dep_vars": "0.0.4"
+    "extract_dep_vars": "0.0.4",
+    "bower_resolve": "~0.1.2",
+    "async": "~0.2.9"
   },
   "repository": {
     "type": "git",
