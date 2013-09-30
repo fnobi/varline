@@ -21,7 +21,9 @@ module.exports = function (grunt) {
             locate = config.locate || {},
             ignoredNames = config.ignore || [],
             forceddNames = config.forced || [],
-            dest = config.dest || 'js';
+            dest = config.dest || 'js',
+
+            done = this.async();
 
         var pathsForName = scriptMatchList({
             loadPath: loadPath,
@@ -62,6 +64,7 @@ module.exports = function (grunt) {
 
                 grunt.file.write(destPath, sources.join('\n'));
             });
-        }]);
+            next();
+        }], done);
     });
 };
