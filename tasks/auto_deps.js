@@ -31,7 +31,11 @@ module.exports = function (grunt) {
         });
 
         async.series([function (next) {
-            bowerPathList(process.cwd(), function (list) {
+            bowerPathList(process.cwd(), function (err, list) {
+                if (err) {
+                    return next(err);
+                }
+
                 for (var i in list) {
                     pathsForName[i] = list[i];
                 }
