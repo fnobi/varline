@@ -22,6 +22,7 @@ module.exports = function (grunt) {
             ignoredNames = config.ignore || [],
             forceddNames = config.forced || [],
             dest = config.dest || 'js',
+            wrap = config.wrap ? true : false,
 
             done = this.async();
 
@@ -65,6 +66,12 @@ module.exports = function (grunt) {
                 vars.forEach(function (name) {
                     sources.push(grunt.file.read(pathsForName[name]));
                 });
+
+                if (wrap) {
+                    console.log('[wrap]');
+                    sources.unshift('(function () {');
+                    sources.push('})();');
+                }
 
                 grunt.file.write(destPath, sources.join('\n'));
             });
