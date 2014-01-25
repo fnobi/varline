@@ -19,6 +19,7 @@ module.exports = function (grunt) {
             loadPath = config.loadPath || ['src/js/*.js', 'src/js/**/*.js'],
             scripts = config.scripts || [],
             locate = config.locate || {},
+            alias = config.alias || {},
             ignoredNames = config.ignore || [],
             forceddNames = config.forced || [],
             dest = config.dest || 'js',
@@ -54,8 +55,13 @@ module.exports = function (grunt) {
                     return;
                 }
 
-                var vars = pathToConcated(name, pathsForName, ignoredNames),
-                    sources = [];
+                var vars = pathToConcated({
+                    scriptName: name,
+                    pathsForName: pathsForName,
+                    ignoredNames: ignoredNames,
+                    alias: alias
+                });
+                var sources = [];
 
                 forceddNames.forEach(function (n) {
                     vars.unshift(n);
