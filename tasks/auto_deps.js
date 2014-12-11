@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                 });
 
                 if (wrap) {
-                    console.log('[wrap]');
+                    // console.log('[wrap]');
                     sources.unshift('(function () {');
                     sources.push('})();');
                 }
