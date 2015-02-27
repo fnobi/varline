@@ -35,7 +35,9 @@ module.exports = function (grunt) {
         async.series([function (next) {
             bowerPathList(process.cwd(), function (err, list) {
                 if (err) {
-                    return next(err);
+                    // bower componentsの取得に失敗しても、候補に失敗するだけなので、
+                    // 全体の処理は気にせず進める
+                    return next();
                 }
 
                 for (var i in list) {
@@ -82,6 +84,11 @@ module.exports = function (grunt) {
                 grunt.file.write(destPath, sources.join('\n'));
             });
             next();
-        }], done);
+        }], function (err) {
+            if (err) {
+                throw new Error(err);
+            }
+            done();
+        });
     });
 };
