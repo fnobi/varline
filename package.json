@@ -6,7 +6,9 @@
     "grunt": "~0.4.1",
     "extract_dep_vars": "0.0.4",
     "bower_resolve": "~0.1.3",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "through2": "0.*",
+    "gulp-util": "3.*"
   },
   "repository": {
     "type": "git",
