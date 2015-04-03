@@ -2,6 +2,7 @@
   "name": "grunt-auto-deps",
   "version": "0.5.0",
   "description": "resolve js dependencies and concat.",
+  "main": "index.js",
   "dependencies": {
     "grunt": "~0.4.1",
     "extract_dep_vars": "0.0.4",
