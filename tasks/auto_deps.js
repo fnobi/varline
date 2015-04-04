@@ -1,17 +1,17 @@
 var path = require('path');
 var async = require('async');
 
+var Varline = require(__dirname + '/../lib/Varline');
+
+var TASK_NAME = 'auto_deps';
+var TASK_DESCRIPTION = 'resolve js dependency and concat automatically.';
+
 module.exports = function (grunt) {
-    var Varline = require(__dirname + '/../lib/Varline');
-
-    var taskName = 'auto_deps';
-    var taskDescription = 'resolve js dependency and concat automatically.';
-
     grunt.file.defaultEncoding = 'utf8';
 
-    grunt.registerMultiTask(taskName, taskDescription, function () {
+    grunt.registerMultiTask(TASK_NAME, TASK_DESCRIPTION, function () {
         var target = this.target;
-        var config = grunt.config(taskName)[target];
+        var config = grunt.config(TASK_NAME)[target];
         var scripts = config.scripts || [];
         var dest = config.dest || 'js';
         var done = this.async();
