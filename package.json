@@ -1,6 +1,6 @@
 {
   "name": "grunt-auto-deps",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "resolve js dependencies and concat.",
   "main": "index.js",
   "dependencies": {
@@ -16,7 +16,8 @@
     "url": "git://github.com/fnobi/grunt-auto-deps.git"
   },
   "keywords": [
-    "gruntplugin", "gulpplugin"
+    "gruntplugin",
+    "gulpplugin"
   ],
   "author": "Fujisawa Shin",
   "license": "BSD",
