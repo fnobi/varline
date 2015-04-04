@@ -3,7 +3,7 @@ var async = require('async');
 
 var Varline = require(__dirname + '/../lib/Varline');
 
-var TASK_NAME = 'auto_deps';
+var TASK_NAME = 'varline';
 var TASK_DESCRIPTION = 'resolve js dependency and concat automatically.';
 
 module.exports = function (grunt) {
