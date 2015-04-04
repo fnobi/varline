@@ -12,7 +12,9 @@ npm install varline
 
 ## use in grunt.js
 
-```javascript:Gruntfile.js
+```javascript
+// Gruntfile.js
+
 grunt.loadNpmTasks('varline');
 
 grunt.initConfig({
@@ -48,7 +50,9 @@ grunt.initConfig({
 
 ## use in gulp.js
 
-```javascript:gulpfile.js
+```javascript
+// gulpfile.js
+
 var varline = require('varline').gulp;
 
 gulp.task('js', function () {
