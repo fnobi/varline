@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "async": "0.*",
-    "extract_dep_vars": "0.*",
+    "extract_dep_vars": "1.0.*",
     "bower_resolve": "0.*",
     "grunt": "0.4.*",
     "through2": "0.*",
