@@ -1,6 +1,6 @@
 {
   "name": "varline",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "resolve js dependencies and concat.",
   "main": "index.js",
   "dependencies": {
